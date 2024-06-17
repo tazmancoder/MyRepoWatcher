@@ -76,8 +76,8 @@ struct DoubleRepoWidget: Widget {
 					.background()
 			}
 		}
-		.configurationDisplayName("Douple Repo Watcher")
-		.description("Keep an eye on one or two GitHub repositories.")
+		.configurationDisplayName("Douple Repo")
+		.description("Keep an eye on one or two online repositories.")
 		.supportedFamilies([.systemLarge])
 	}
 }

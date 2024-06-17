@@ -14,7 +14,7 @@ struct SingleRepoProvider: TimelineProvider {
 	}
 	
 	func getSnapshot(in context: Context, completion: @escaping (SingleRepoEntry) -> Void) {
-		let entry = SingleRepoEntry(date: .now, repo: MockData.repoTwo)
+		let entry = SingleRepoEntry(date: .now, repo: MockData.repoOne)
 		completion(entry)
 	}
 	
@@ -100,13 +100,13 @@ struct SingleRepoWidget: Widget {
 					.background()
 			}
 		}
-		.configurationDisplayName("SingleRepo")
-		.description("Track a single repository.")
+		.configurationDisplayName("Single Repo")
+		.description("Track any single online repository.")
 		.supportedFamilies([.systemMedium, .systemLarge])
 	}
 }
 
-#Preview(as: .systemMedium) {
+#Preview(as: .systemLarge) {
 	SingleRepoWidget()
 } timeline: {
 	SingleRepoEntry(date: .now, repo: MockData.repoOne)
