@@ -71,11 +71,11 @@ struct RepoMediumView: View {
 	
 }
 
-#Preview(as: .systemLarge) {
-	DoubleRepoWidget()
-} timeline: {
-	DoubleRepoEntry(date: .now, topRepo: MockData.repoOne, bottomRepo: MockData.repoTwo)
-}
+//#Preview(as: .systemLarge) {
+//	DoubleRepoWidget()
+//} timeline: {
+//	DoubleRepoEntry(date: .now, topRepo: MockData.repoOne, bottomRepo: MockData.repoTwo)
+//}
 
 fileprivate struct StatLabel: View {
 	let value: Int

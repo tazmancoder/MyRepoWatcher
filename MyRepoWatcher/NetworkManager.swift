@@ -95,6 +95,7 @@ enum NetworkError: Error {
 }
 
 enum RepoURL {
+	static let prefix = "https://api.github.com/repos/"
 	static let policies = "https://api.github.com/repos/tazmancoder/Policies"
 	static let appAlert = "https://api.github.com/repos/tazmancoder/AppAlert"
 	static let faq = "https://api.github.com/repos/tazmancoder/FAQ"
