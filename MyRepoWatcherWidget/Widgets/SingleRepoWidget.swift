@@ -13,11 +13,11 @@ struct SingleRepoProvider: AppIntentTimelineProvider {
 		SingleRepoEntry(date: .now, repo: MockData.repoOne)
 	}
 	
-	func snapshot(for configuration: SelectSingleRepo, in context: Context) async -> SingleRepoEntry {
+	func snapshot(for configuration: SelectSingleRepoIntent, in context: Context) async -> SingleRepoEntry {
 		return SingleRepoEntry(date: .now, repo: MockData.repoOne)
 	}
 	
-	func timeline(for configuration: SelectSingleRepo, in context: Context) async -> Timeline<SingleRepoEntry> {
+	func timeline(for configuration: SelectSingleRepoIntent, in context: Context) async -> Timeline<SingleRepoEntry> {
 		let nextUpdate = Date().addingTimeInterval(43200) // This is 12 hours in seconds
 		
 		do {
@@ -87,7 +87,7 @@ struct SingleRepoWidget: Widget {
 	let kind: String = "SingleRepoWidget"
 	
 	var body: some WidgetConfiguration {
-		AppIntentConfiguration(kind: kind, intent: SelectSingleRepo.self, provider: SingleRepoProvider()) { entry in
+		AppIntentConfiguration(kind: kind, intent: SelectSingleRepoIntent.self, provider: SingleRepoProvider()) { entry in
 			if #available(iOS 17.0, *) {
 				SingleRepoEntryView(entry: entry)
 					.containerBackground(.fill.tertiary, for: .widget)

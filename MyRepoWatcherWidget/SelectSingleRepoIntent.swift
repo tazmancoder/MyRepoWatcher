@@ -1,5 +1,5 @@
 //
-//  SelectSingleRepo.swift
+//  SelectSingleRepoIntent.swift
 //  MyRepoWatcher
 //
 //  Created by Mark Perryman on 6/17/24.
@@ -8,7 +8,7 @@
 import Foundation
 import AppIntents
 
-struct SelectSingleRepo: AppIntent, WidgetConfigurationIntent, CustomIntentMigratedAppIntent {
+struct SelectSingleRepoIntent: AppIntent, WidgetConfigurationIntent, CustomIntentMigratedAppIntent {
     static let intentClassName = "SelectSingleRepoIntent"
 
     static var title: LocalizedStringResource = "Select Single Repo"

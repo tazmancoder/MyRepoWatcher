@@ -26,8 +26,8 @@
 		66214A9E2C20C5CA000A8744 /* RepoMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66214A9D2C20C5CA000A8744 /* RepoMediumView.swift */; };
 		66214AA02C20C5EE000A8744 /* ContributorMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66214A9F2C20C5EE000A8744 /* ContributorMediumView.swift */; };
 		66214AA42C20C8AE000A8744 /* SingleRepoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66214AA32C20C8AE000A8744 /* SingleRepoWidget.swift */; };
-		666295B22C2113DA005A16A2 /* SelectSingleRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666295B12C2113DA005A16A2 /* SelectSingleRepo.swift */; };
-		666295B32C2113DA005A16A2 /* SelectSingleRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666295B12C2113DA005A16A2 /* SelectSingleRepo.swift */; };
+		666295B22C2113DA005A16A2 /* SelectSingleRepoIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666295B12C2113DA005A16A2 /* SelectSingleRepoIntent.swift */; };
+		666295B32C2113DA005A16A2 /* SelectSingleRepoIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666295B12C2113DA005A16A2 /* SelectSingleRepoIntent.swift */; };
 		666295B42C2114D0005A16A2 /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66214A752C20C13F000A8744 /* UserDefaults+Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,7 @@
 		66214AA32C20C8AE000A8744 /* SingleRepoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRepoWidget.swift; sourceTree = "<group>"; };
 		66214AA82C20E8E3000A8744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		66214AAE2C20E9BA000A8744 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		666295B12C2113DA005A16A2 /* SelectSingleRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSingleRepo.swift; sourceTree = "<group>"; };
+		666295B12C2113DA005A16A2 /* SelectSingleRepoIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSingleRepoIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				66214A9A2C20C551000A8744 /* MockData.swift */,
-				666295B12C2113DA005A16A2 /* SelectSingleRepo.swift */,
+				666295B12C2113DA005A16A2 /* SelectSingleRepoIntent.swift */,
 				66214A992C20C345000A8744 /* Widgets */,
 				66214A9C2C20C5A6000A8744 /* Views */,
 				66214A862C20C269000A8744 /* Assets.xcassets */,
@@ -286,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66214A972C20C2FE000A8744 /* NetworkManager.swift in Sources */,
-				666295B22C2113DA005A16A2 /* SelectSingleRepo.swift in Sources */,
+				666295B22C2113DA005A16A2 /* SelectSingleRepoIntent.swift in Sources */,
 				66214A692C20C09B000A8744 /* ContentView.swift in Sources */,
 				66214A942C20C2D4000A8744 /* Contributor.swift in Sources */,
 				66214A672C20C09B000A8744 /* MyRepoWatcherApp.swift in Sources */,
@@ -307,7 +307,7 @@
 				66214A9E2C20C5CA000A8744 /* RepoMediumView.swift in Sources */,
 				66214AA42C20C8AE000A8744 /* SingleRepoWidget.swift in Sources */,
 				666295B42C2114D0005A16A2 /* UserDefaults+Ext.swift in Sources */,
-				666295B32C2113DA005A16A2 /* SelectSingleRepo.swift in Sources */,
+				666295B32C2113DA005A16A2 /* SelectSingleRepoIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
