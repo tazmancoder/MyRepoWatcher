@@ -74,7 +74,51 @@ struct SingleRepoEntryView: View {
 				
 				ContributorMediumView(repo: entry.repo)
 			}
-		case .systemSmall, .systemExtraLarge, .accessoryCircular, .accessoryRectangular, .accessoryInline:
+		case .accessoryInline:
+			Text("\(entry.repo.name) - \(entry.repo.daysSinceLastActivity) days")
+		case .accessoryCircular:
+			ZStack {
+				AccessoryWidgetBackground()
+				VStack {
+					Image(systemName: "server.rack")
+						.imageScale(.small)
+					Text("\(entry.repo.daysSinceLastActivity)")
+						.font(.headline)
+					Text("days")
+						.font(.caption)
+				}
+			}
+		case .accessoryRectangular:
+			
+			VStack(alignment: .leading) {
+				Text(entry.repo.name)
+					.font(.headline)
+				Text("\(entry.repo.daysSinceLastActivity) days")
+				
+				HStack {
+					Image(systemName: "star.fill")
+						.resizable()
+						.frame(width: 12, height: 12)
+						.aspectRatio(contentMode: .fit)
+					Text("\(entry.repo.watchers)")
+					
+					Image(systemName: "tuningfork")
+						.resizable()
+						.frame(width: 12, height: 12)
+						.aspectRatio(contentMode: .fit)
+					Text("\(entry.repo.forks)")
+					
+					if entry.repo.hasIssues {
+						Image(systemName: "exclamationmark.triangle.fill")
+							.resizable()
+							.frame(width: 12, height: 12)
+							.aspectRatio(contentMode: .fit)
+						Text("\(entry.repo.openIssues)")
+					}
+				}
+				.font(.caption)
+			}
+		case .systemSmall, .systemExtraLarge:
 			EmptyView()
 		@unknown default:
 			EmptyView()
@@ -99,7 +143,7 @@ struct SingleRepoWidget: Widget {
 		}
 		.configurationDisplayName("Single Repo")
 		.description("Track any single online repository.")
-		.supportedFamilies([.systemMedium, .systemLarge])
+		.supportedFamilies([.systemMedium, .systemLarge, .accessoryInline, .accessoryCircular, .accessoryRectangular])
 	}
 }
 

@@ -10,11 +10,6 @@ import WidgetKit
 
 struct RepoMediumView: View {
 	let repo: Repository
-	let formatter = ISO8601DateFormatter()
-	
-	var numberOfDaysSince: Int {
-		calculateDaysSinceLastActivity(from: repo.pushedAt)
-	}
 	
 	var body: some View {
 		HStack {
@@ -45,12 +40,12 @@ struct RepoMediumView: View {
 			Spacer()
 			
 			VStack {
-				Text("\(numberOfDaysSince)")
+				Text("\(repo.daysSinceLastActivity)")
 					.font(.system(size: 50))
 					.frame(width: 90)
 					.minimumScaleFactor(0.6)
 					.lineLimit(1)
-					.foregroundColor(numberOfDaysSince > 50 ? .pink : .green)
+					.foregroundColor(repo.daysSinceLastActivity > 50 ? .pink : .green)
 					.contentTransition(.numericText(countsDown: true))
 				
 				Text("days ago")
@@ -59,14 +54,6 @@ struct RepoMediumView: View {
 			}
 		}
 		.containerBackground(for: .widget, content: { })
-	}
-	
-	func calculateDaysSinceLastActivity(from dateString: String) -> Int {
-		let formatter = ISO8601DateFormatter()
-		let lastActivityDate = formatter.date(from: dateString) ?? .now
-		let daysSinceLastActivity = Calendar.current.dateComponents([.day], from: lastActivityDate, to: .now).day ?? 0
-		
-		return daysSinceLastActivity
 	}
 	
 }
